@@ -1,0 +1,296 @@
+/* AdminLogin Custom Styles */
+.admin-login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-login-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="admin-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="white" opacity="0.1"/><circle cx="10" cy="10" r="1" fill="white" opacity="0.05"/><circle cx="40" cy="40" r="1" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23admin-pattern)"/></svg>');
+  opacity: 0.3;
+}
+
+.admin-login-card {
+  background-color: var(--card-bg);
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.admin-login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.admin-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+  transition: var(--transition);
+}
+
+.admin-icon-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(255, 107, 53, 0.4);
+}
+
+.admin-icon {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--body-color);
+  margin-bottom: 0.5rem;
+}
+
+.admin-subtitle {
+  color: var(--body-color);
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+.form-label {
+  color: var(--body-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-control-custom {
+  background-color: var(--input-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  color: var(--body-color);
+  transition: var(--transition);
+}
+
+.form-control-custom:focus {
+  background-color: var(--input-bg);
+  border-color: var(--primary-color);
+  color: var(--body-color);
+  box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25);
+  transform: translateY(-1px);
+}
+
+.password-input-group {
+  position: relative;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--body-color);
+  opacity: 0.6;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.password-toggle-btn:hover {
+  opacity: 1;
+  color: var(--primary-color);
+}
+
+.admin-login-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-login-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.admin-login-btn:hover::before {
+  left: 100%;
+}
+
+.admin-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+.admin-login-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.back-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Alert Styling */
+.alert-info {
+  background-color: rgba(13, 202, 240, 0.1);
+  border: 1px solid rgba(13, 202, 240, 0.2);
+  color: var(--body-color);
+  border-radius: 0.75rem;
+}
+
+.alert-heading {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .admin-login-page {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+}
+
+[data-theme="dark"] .admin-login-card {
+  background-color: #1e1e1e;
+  border: 1px solid #495057;
+}
+
+[data-theme="dark"] .form-control-custom {
+  background-color: #2d2d2d;
+  border-color: #495057;
+  color: #f8f9fa;
+}
+
+[data-theme="dark"] .form-control-custom:focus {
+  background-color: #2d2d2d;
+  border-color: #ff6b35;
+  color: #f8f9fa;
+}
+
+[data-theme="dark"] .admin-icon-wrapper {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+}
+
+[data-theme="dark"] .admin-login-btn {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+}
+
+[data-theme="dark"] .admin-login-btn:hover {
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+}
+
+[data-theme="dark"] .alert-info {
+  background-color: rgba(255, 107, 53, 0.1);
+  border-color: rgba(255, 107, 53, 0.2);
+}
+
+[data-theme="dark"] .alert-heading {
+  color: #ff6b35;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-login-card {
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .admin-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .admin-icon {
+    font-size: 2rem;
+  }
+  
+  .admin-title {
+    font-size: 1.75rem;
+  }
+  
+  .admin-login-card .card-body {
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-login-card .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  .admin-title {
+    font-size: 1.5rem;
+  }
+  
+  .admin-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for card entrance */
+.admin-login-card {
+  animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading spinner customization */
+.spinner-border-sm {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.125em;
+}
+
+/* Focus states for accessibility */
+.form-control-custom:focus,
+.admin-login-btn:focus,
+.password-toggle-btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+} 

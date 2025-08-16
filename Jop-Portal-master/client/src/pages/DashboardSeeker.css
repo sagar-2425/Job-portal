@@ -1,0 +1,638 @@
+/* Jobseeker Dashboard Styles */
+.dashboard-seeker-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-top: 100px; /* Add top padding for fixed navbar */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+}
+
+.dashboard-seeker-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.seeker-dashboard-root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2.5rem 1rem 3rem 1rem;
+}
+.seeker-dashboard-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.seeker-dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+.seeker-dashboard-subtitle {
+  color: #718096;
+  font-size: 1.15rem;
+}
+.seeker-dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.seeker-stat-card {
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(102,126,234,0.08);
+  padding: 1.2rem 0.5rem;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.seeker-stat-card .stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+}
+.seeker-stat-card .stat-label {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+.seeker-dashboard-actions {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.seeker-action-btn {
+  padding: 0.85rem 2rem;
+  border-radius: 0.7rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.seeker-action-btn.primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.10);
+}
+.seeker-action-btn.primary:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  color: #fff;
+}
+.seeker-action-btn.outline {
+  background: #fff;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+.seeker-action-btn.outline:hover {
+  background: #e6e8fa;
+  color: #4a5568;
+}
+.seeker-action-btn.small {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.98rem;
+}
+.seeker-applications-section {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #f6f7fa;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px rgba(102,126,234,0.08);
+  padding: 2rem 1.5rem;
+  overflow-x: auto;
+  /* Add outer margin for gap from container */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.seeker-applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.seeker-applications-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+.seeker-applications-empty {
+  text-align: center;
+  padding: 3rem 0;
+}
+.seeker-applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .seeker-applications-section {
+    padding: 1rem 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .seeker-applications-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .seeker-dashboard-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .seeker-applications-section {
+    padding: 1rem 0.3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .seeker-dashboard-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 320px;
+  }
+}
+/* Make application card background more shady and distinct from container */
+.seeker-application-card {
+  background: linear-gradient(135deg, #e6e9f0 60%, #cfd6e6 100%);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 24px rgba(102,126,234,0.18), 0 2px 8px rgba(44,62,80,0.12);
+  padding: 1.2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+  border-left: 6px solid #667eea;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: box-shadow 0.25s, transform 0.22s, background 0.22s;
+}
+.seeker-application-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 12px 36px rgba(102,126,234,0.28), 0 4px 16px rgba(44,62,80,0.18);
+  background: linear-gradient(135deg, #f0f2f7 60%, #dbe3f3 100%);
+}
+.seeker-application-card.status-hired { border-color: #38a169; }
+.seeker-application-card.status-rejected { border-color: #e53e3e; }
+.seeker-application-card.status-interview { border-color: #805ad5; }
+.seeker-application-card.status-viewed { border-color: #ecc94b; }
+.seeker-application-card.status-applied { border-color: #667eea; }
+.status-shortlisted {
+  border-color: #38a169 !important;
+}
+.application-card-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+.application-job-info {
+  flex: 1;
+}
+.job-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.2rem;
+}
+.job-link {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.job-link:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+.job-meta {
+  color: #718096;
+  font-size: 0.98rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+.salary {
+  color: #38a169;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.application-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: #3182ce;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+  min-width: 90px;
+  justify-content: center;
+}
+.status-hired .application-status-badge { background: #38a169; }
+.status-rejected .application-status-badge { background: #e53e3e; }
+.status-interview .application-status-badge { background: #805ad5; }
+.status-viewed .application-status-badge { background: #ecc94b; color: #2d3748; }
+.status-applied .application-status-badge { background: #667eea; }
+.status-shortlisted .application-status-badge {
+  background: #38a169 !important;
+  color: #fff !important;
+}
+.status-rejected .application-status-badge {
+  background: #e53e3e !important;
+  color: #fff !important;
+}
+.application-card-actions {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.seeker-app-btn {
+  min-width: 90px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(102,126,234,0.08);
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+.seeker-app-btn.view {
+  background: #e3eafe;
+  color: #2d3748;
+  border: 2px solid #667eea;
+}
+.seeker-app-btn.view:hover {
+  background: #d6e0fa;
+  color: #2d3748;
+  border-color: #5a67d8;
+}
+
+.seeker-app-btn.edit {
+  background: #ede7f6;
+  color: #5e35b1;
+  border: 2px solid #7e57c2;
+}
+.seeker-app-btn.edit:hover {
+  background: #d1c4e9;
+  color: #4527a0;
+  border-color: #5e35b1;
+}
+
+.seeker-app-btn.withdraw {
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 2px solid #e53e3e;
+}
+.seeker-app-btn.withdraw:hover {
+  background: #ffeaea;
+  color: #b91c1c;
+  border-color: #b91c1c;
+}
+
+.seeker-app-btn.contact {
+  background: #e6fffa;
+  color: #319795;
+  border: 2px solid #38b2ac;
+}
+.seeker-app-btn.contact:hover {
+  background: #b2f5ea;
+  color: #285e61;
+  border-color: #319795;
+}
+.seeker-app-btn.outline {
+  background: #fff;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+.seeker-app-btn.outline:hover {
+  background: #e6e8fa;
+  color: #4a5568;
+}
+.seeker-app-btn.primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+}
+.seeker-app-btn.primary:hover {
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  color: #fff;
+}
+.application-date {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+  text-align: right;
+}
+/* Modal Styles (override react-modal) */
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+.modal-section {
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+.modal-form input,
+.modal-form textarea,
+.modal-form select {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  font-size: 1rem;
+  background: #fff;
+  color: #2d3748;
+  transition: border-color 0.2s;
+}
+.modal-form input:focus,
+.modal-form textarea:focus,
+.modal-form select:focus {
+  border-color: #667eea;
+  outline: none;
+}
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+.cover-letter {
+  background: #f7fafc;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  color: #4a5568;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+[data-theme="dark"] .seeker-dashboard-root {
+  background: linear-gradient(135deg, #23272f 0%, #2d3748 100%);
+}
+[data-theme="dark"] .seeker-dashboard-header .seeker-dashboard-title,
+[data-theme="dark"] .seeker-dashboard-header .seeker-dashboard-subtitle {
+  color: #e2e8f0;
+}
+[data-theme="dark"] .seeker-stat-card {
+  background: #23272f;
+  color: #e2e8f0;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.10);
+}
+[data-theme="dark"] .seeker-applications-section {
+  background: #232a36;
+  color: #e2e8f0;
+  box-shadow: 0 2px 16px rgba(30,58,138,0.10);
+}
+[data-theme="dark"] .seeker-application-card {
+  background: linear-gradient(135deg, #232a36 60%, #1a202c 100%);
+  color: #e2e8f0;
+  box-shadow: 0 6px 24px rgba(30,58,138,0.28), 0 2px 8px rgba(0,0,0,0.28);
+}
+[data-theme="dark"] .job-title,
+[data-theme="dark"] .job-link,
+[data-theme="dark"] .job-meta,
+[data-theme="dark"] .salary,
+[data-theme="dark"] .application-date {
+  color: #e2e8f0;
+}
+[data-theme="dark"] .application-status-badge {
+  color: #fff;
+}
+[data-theme="dark"] .modal-title,
+[data-theme="dark"] .modal-section {
+  color: #e2e8f0;
+}
+[data-theme="dark"] .modal-form input,
+[data-theme="dark"] .modal-form textarea,
+[data-theme="dark"] .modal-form select {
+  background: #23272f;
+  color: #e2e8f0;
+  border-color: #495057;
+}
+[data-theme="dark"] .modal-form input:focus,
+[data-theme="dark"] .modal-form textarea:focus,
+[data-theme="dark"] .modal-form select:focus {
+  border-color: #667eea;
+}
+[data-theme="dark"] .cover-letter {
+  background: #2d3748;
+  color: #e2e8f0;
+} 
+
+.application-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.application-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.salary {
+  color: #38a169;
+  font-weight: 600;
+}
+
+.application-date {
+  color: #718096;
+  font-size: 0.97rem;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .application-card-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .application-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+} 
+
+/* Responsive font sizes for cards and text */
+.seeker-application-card {
+  font-size: 1rem;
+}
+.job-title {
+  font-size: 1.15rem;
+}
+.job-meta, .application-date, .salary, .application-status-badge {
+  font-size: 0.98rem;
+}
+
+@media (max-width: 900px) {
+  .seeker-application-card {
+    font-size: 0.97rem;
+  }
+  .job-title {
+    font-size: 1.05rem;
+  }
+  .job-meta, .application-date, .salary, .application-status-badge {
+    font-size: 0.93rem;
+  }
+}
+@media (max-width: 600px) {
+  .seeker-application-card {
+    font-size: 0.93rem;
+  }
+  .job-title {
+    font-size: 0.98rem;
+  }
+  .job-meta, .application-date, .salary, .application-status-badge {
+    font-size: 0.89rem;
+  }
+  .seeker-app-btn {
+    font-size: 0.93rem;
+    padding: 0.45rem 0.9rem;
+  }
+} 
+
+.custom-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 62, 80, 0.45);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  animation: fadeIn 0.2s;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.custom-modal-content {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18), 0 1.5px 6px rgba(44,62,80,0.10);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 480px;
+  width: 95vw;
+  position: relative;
+  animation: popIn 0.22s;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 15vh;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.95); opacity: 0.7; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.custom-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #667eea;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 2;
+}
+
+.custom-modal-close:hover {
+  color: #e53e3e;
+} 
+
+/* Clickable Stat Card */
+.seeker-stat-card.clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.seeker-stat-card.clickable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.seeker-stat-card.clickable:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.seeker-stat-card.clickable:hover::before {
+  left: 100%;
+}
+
+.seeker-stat-card.clickable:active {
+  transform: translateY(-2px);
+}
+
+/* Dark mode adjustments for clickable card */
+[data-theme="dark"] .seeker-stat-card.clickable:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+} 
+
+.modal .seeker-applications-section {
+  width: 80% !important;
+  max-width: 80% !important;
+  min-width: 320px;
+  margin: 0 auto !important;
+  padding: 2rem 2rem;
+  background: #f8fafc;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+  display: block;
+  text-align: left !important;
+}
+@media (max-width: 900px) {
+  .modal .seeker-applications-section {
+    width: 98vw !important;
+    max-width: 98vw !important;
+    min-width: 0;
+    padding: 1rem 0.5rem;
+  }
+} 

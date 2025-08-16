@@ -1,0 +1,195 @@
+/* Admin Access Page Styles */
+.admin-access-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-access-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="admin-pattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="white" opacity="0.1"/><circle cx="10" cy="10" r="1" fill="white" opacity="0.05"/><circle cx="40" cy="40" r="1" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23admin-pattern)"/></svg>');
+  opacity: 0.3;
+}
+
+.admin-access-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.admin-access-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.admin-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  transition: var(--transition);
+}
+
+.admin-icon-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+}
+
+.admin-icon {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.admin-subtitle {
+  color: #718096;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.access-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.access-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.access-btn:hover::before {
+  left: 100%;
+}
+
+.access-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+.back-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.security-notice {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+}
+
+.security-notice .alert {
+  border-radius: 0.75rem;
+  border: none;
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #856404;
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .admin-access-card {
+  background-color: rgba(45, 55, 72, 0.95);
+  border: 1px solid #4a5568;
+}
+
+[data-theme="dark"] .admin-title {
+  color: #f7fafc;
+}
+
+[data-theme="dark"] .admin-subtitle {
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .back-link {
+  color: #667eea;
+}
+
+[data-theme="dark"] .back-link:hover {
+  color: #764ba2;
+}
+
+[data-theme="dark"] .security-notice .alert {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #fbd38d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-access-card {
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .admin-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .admin-icon {
+    font-size: 2rem;
+  }
+  
+  .admin-title {
+    font-size: 1.75rem;
+  }
+  
+  .admin-access-card .card-body {
+    padding: 2rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-access-card .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  .admin-title {
+    font-size: 1.5rem;
+  }
+  
+  .admin-subtitle {
+    font-size: 0.9rem;
+  }
+} 

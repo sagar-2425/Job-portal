@@ -1,0 +1,246 @@
+/* Clean and Attractive Job Card Design */
+.job-card {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(255, 255, 255, 0.9) 100%);
+  border: 1px solid rgba(120, 119, 198, 0.1);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 12px 0;
+  min-height: 120px;
+  width: 100%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.job-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(120, 119, 198, 0.15);
+  border-color: rgba(120, 119, 198, 0.2);
+}
+
+/* Dark Theme */
+[data-theme="dark"] .job-card {
+  background: linear-gradient(135deg, 
+    rgba(30, 30, 40, 0.95) 0%, 
+    rgba(25, 25, 35, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .job-card:hover {
+  box-shadow: 0 8px 30px rgba(255, 119, 48, 0.15);
+  border-color: rgba(255, 119, 48, 0.2);
+}
+
+/* Main Content Area */
+.job-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Company Name at Top */
+.company-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #7877c6;
+  margin: 0;
+  opacity: 0.9;
+  order: -1;
+}
+
+/* Job Header */
+.job-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Job Details Row */
+.job-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.detail-item svg {
+  width: 14px;
+  height: 14px;
+  color: #7877c6;
+  flex-shrink: 0;
+}
+
+/* Tags */
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tag {
+  background: linear-gradient(135deg, rgba(120, 119, 198, 0.1), rgba(255, 119, 48, 0.1));
+  border: 1px solid rgba(120, 119, 198, 0.2);
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* Action Buttons */
+.job-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.action-btn {
+  background: white !important;
+  color: black !important;
+  border: 1px solid rgba(120, 119, 198, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  min-width: 80px;
+  height: 36px;
+}
+
+.action-btn:hover {
+  background: linear-gradient(135deg, #7877c6, #9b7cff) !important;
+  color: white !important;
+  border-color: #7877c6 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(120, 119, 198, 0.4) !important;
+}
+
+/* Save Button */
+.save-button {
+  background: transparent;
+  border: 1px solid rgba(120, 119, 198, 0.3);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+}
+
+.save-button:hover {
+  background: rgba(120, 119, 198, 0.1);
+  border-color: #7877c6;
+}
+
+.save-button svg {
+  width: 16px;
+  height: 16px;
+  color: #7877c6;
+  transition: all 0.2s ease;
+}
+
+.save-button:hover svg {
+  color: #7877c6;
+  transform: scale(1.1);
+}
+
+.save-button.saved svg {
+  fill: #7877c6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .job-card {
+    padding: 16px 20px;
+    min-height: 100px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .job-card-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .company-name {
+    white-space: normal;
+  }
+  .job-details {
+    gap: 12px;
+  }
+  .job-actions {
+    justify-content: center;
+    flex-direction: row !important;
+    gap: 10px;
+  }
+  .action-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    padding: 14px 16px;
+  }
+  
+  .job-title {
+    font-size: 1.1rem;
+  }
+  
+  .company-name {
+    font-size: 0.9rem;
+  }
+  
+  .detail-item {
+    font-size: 0.8rem;
+  }
+  
+  .action-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+} 

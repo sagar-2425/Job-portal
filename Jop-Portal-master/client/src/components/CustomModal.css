@@ -1,0 +1,120 @@
+.custom-modal-content {
+  top: 10%;
+  width: 90vw;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+  padding: 2rem 2rem;
+  position: relative;
+  margin: 5vh auto;
+}
+
+.edit-application-form-wide, .application-view-modal-wide {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  display: block;
+}
+
+.application-view-modal-wide > * {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box;
+  align-items: left !important;
+}
+
+/* Professional look for view application modal */
+.application-view-modal-wide {
+  background: #f8fafc;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.application-view-modal-wide .modal-title {
+  color: #e53e3e;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.application-view-modal-wide .modal-section {
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  color: #2d3748;
+}
+
+.application-view-modal-wide .cover-letter {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #2d3748;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+}
+
+.application-view-modal-wide .modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.view-app-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 8px rgba(44,62,80,0.06);
+  padding: 2rem 2.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.view-app-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  gap: 1.5rem;
+}
+
+.view-app-label {
+  min-width: 160px;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.08rem;
+  flex-shrink: 0;
+}
+
+.view-app-value {
+  flex: 1;
+  color: #374151;
+  font-size: 1.08rem;
+  word-break: break-word;
+}
+
+.view-app-qna {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.view-app-qna-item {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+@media (max-width: 900px) {
+  .custom-modal-content {
+    width: 90vw;
+    padding: 1.2rem 0.7rem;
+  }
+  .edit-application-form-wide, .application-view-modal-wide {
+    width: 98%;
+    padding: 0;
+  }
+} 
